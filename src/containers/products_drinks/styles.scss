@@ -1,0 +1,73 @@
+@import '../../core/StyleSheets/App.scss';
+
+.drinks-area {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: -420px;
+  background-color: #FFF;
+  transition: all ease .3s;
+
+  &.active {
+    margin-bottom: -215px;
+  }
+
+  &.view-all {
+    margin-bottom: 0;
+  }
+
+  .drink {
+    max-width: 768px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-sizing: border-box;
+
+    .top-area {
+      margin-bottom: 20px;
+
+      .top {
+        display: flex;
+        justify-content: space-between;
+
+        .title-area {
+          cursor: default;
+          
+          .title {
+            p {
+              @include font-size(14);
+            }
+          }
+        }
+
+        .more-area {
+          cursor: pointer;
+
+          .more {
+            p {
+              @include font-size(14);
+              color: #F38800;
+              transition: all ease .3s;
+
+              &:hover {
+                letter-spacing: 1px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .middle-area {
+      width: 100%;
+      height: 300px;
+      overflow-y: auto;
+
+      .middle {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  }
+}

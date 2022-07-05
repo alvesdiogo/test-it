@@ -1,0 +1,130 @@
+@import '../../core/StyleSheets/App.scss';
+
+.cart-pizzas {
+  max-width: px(768);
+  margin: 0 auto;
+  padding: px(0) px(16) px(32);
+  
+  .items {
+    border-radius: px(8);
+    padding: px(16) px(8);
+    box-shadow: px(0) px(0) px(4) px(2) #cccccc;
+    display: flex;
+    position: relative;
+    min-height: 90px;
+    max-height: 140px;
+    margin-bottom: 16px;
+
+    .image-logo {
+      display: flex;
+      align-items: center;
+      margin-right: px(10);
+      flex: 1;
+
+      img {
+        width: 80px;
+      }
+    }
+
+    .product-description {
+      flex: 4;
+
+      .row {
+        margin: px(2.5) px(0);
+      }
+
+      .massa, .size, .add-ingredients {
+        font-weight: bold;
+        max-width: 80%;
+
+        .list {
+          font-weight: 400;
+          text-transform: capitalize;
+        }
+      }
+
+      .item-price {
+        text-align: end;
+        margin: px(0) px(5);
+         p {
+           font-size: px(16);
+         }
+      }
+
+      .actions{
+        display: flex;
+        justify-content: space-between;
+
+        .btn {
+          width: px(25);
+          height: px(25);
+          display: flex;
+          align-items: center;
+          border: 0;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        .quantity {
+          display: flex;
+
+          .input {
+            width: 30px;
+            text-align: center;
+            margin: px(0) px(2.5);
+            border-radius: px(5);
+          }
+
+          .btn {
+            background-color: #0eb84b;
+            color: #FFF;
+            font-size: px(12);
+            font-weight: bold;
+          }
+        }
+
+        .del-edit {
+          display: flex;
+
+          .btn {
+            margin: px(0) px(2.5);
+          }
+
+          .action-edit {
+            background-color: #fedd06;
+            font-weight: bold;
+          }
+
+          .action-del {
+            background-color: red;
+            color: #FFF;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  .product-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .row {
+      &.item-price {
+        p {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  .alert-cart-null {
+    background-color: red;
+    color: #FFF;
+    font-size: px(18);
+    padding: px(10);
+    font-weight: bold;
+    border-radius: px(5);
+  }
+}

@@ -1,0 +1,82 @@
+@import '../../core/StyleSheets/App.scss';
+
+.product-item {
+  border-radius: 8px;
+  padding: 16px 8px;
+  box-shadow: 0 0 4px 2px #cccccc;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+
+  .image-logo {
+    margin-right: 16px;
+
+    img {
+      width: vw(75/4);
+    }
+  }
+
+  .product-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .row {
+      &.star {
+        display: flex;
+
+        img {
+          margin-right: px(8);
+        }
+
+        p {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      &.item-description {
+        @include max-lines(1);
+      }
+    }
+  }
+
+  &.promo {
+    box-shadow: 0 0 0 2px #84694a;
+  }
+
+  &.select {
+    box-shadow: 0 0 0 2px #0eb84b;
+  }
+
+  .btn {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    height: 25px;
+    width: 25px;
+    border-radius: 15px;
+    border: 0;
+    font-size: 18px;
+    background-color: #fedd06;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .success {
+    background-color: #0eb84b;
+    color: #FFF;
+  }
+}
+
+// DESKTOP 768
+@include respond-to($desktop) {
+  .product-item {
+    .image-logo {  
+      img {
+        width: px(100);
+      }
+    }
+  }
+}

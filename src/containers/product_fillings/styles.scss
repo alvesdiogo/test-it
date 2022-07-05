@@ -1,0 +1,28 @@
+@import '../../core/StyleSheets/App.scss';
+
+// MOBILE
+.product-fillings {
+  margin-bottom: px(122);
+
+  .section {
+    &.product {
+      max-width: px(768);
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: px(16);
+      padding: px(16);
+    }
+  }
+}
+
+// DESKTOP 768
+@include respond-to($desktop) {
+  .product-fillings {
+    .section {
+      &.product {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}

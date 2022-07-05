@@ -1,0 +1,43 @@
+$mobile__xs: '(max-width: 464px)';
+$mobile__s: '(max-width: 640px)';
+$mobile: '(max-width: 768px)';
+$mobileHorizontal: '(min-width: 576px) and (max-width: 767.98px)';
+$tablet: '(min-width: 768px) and (max-width: 1024px)';
+$desktop__xs: '(min-width: 464px)';
+$desktop__s: '(min-width: 640px)';
+$desktop: '(min-width: 768px)';
+
+@mixin respond-to($media) {
+  @media only screen and #{$media} {
+    @content;
+  }
+}
+
+@function vw($value) {
+  @return #{($value)}vw;
+}
+
+@function vh($value) {
+  @return #{($value)}vh;
+}
+
+@function px($value) {
+  @return #{($value)}px;
+}
+
+@mixin font-size($target) {
+  font-size: vw($target/4);
+
+  @include respond-to($desktop) {
+    font-size: #{$target}px;
+    font-size: rem($target);
+  }
+}
+
+@mixin max-lines($line) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line;
+}

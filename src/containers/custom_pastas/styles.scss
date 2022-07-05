@@ -1,0 +1,85 @@
+@import '../../core/StyleSheets/App.scss';
+
+.custom-pastas-area {
+  width: 100%;
+  box-sizing: border-box;
+
+  .custom-pastas {
+    max-width: px(768);
+    width: 100%;
+    margin: 0 auto;
+
+    .list-pizzas-area {
+      widows: 100%;
+      margin-bottom: px(8);
+
+      .list-pizzas {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: px(16);
+        padding: px(16);
+
+        .list-pizza {          
+          .options-area {
+            width: 100%;
+            margin: px(8) px(0) px(0);
+
+            .options {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+
+              .option {
+                margin: px(0) px(16) px(8) px(0);
+                @include font-size(12);
+                text-transform: uppercase;
+                color: #999;
+                font-weight: bold;
+                cursor: pointer;
+                transition: all ease .3s;
+
+                &.active {
+                  color: #0eb84b;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include respond-to($desktop__s) {
+  .custom-pastas-area {
+    .custom-pastas {
+      .list-pizzas-area {
+        .list-pizzas {
+          .pasta {
+            .options-area {
+              .options {
+                .option {
+                  font-size: px(16);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include respond-to($desktop) {
+  .custom-pastas-area {
+    padding: px(0);
+
+    .custom-pastas {
+      .list-pizzas-area {
+        .list-pizzas {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    }
+  }
+}

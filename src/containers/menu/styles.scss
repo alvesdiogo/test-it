@@ -1,0 +1,129 @@
+@import '../../core/StyleSheets/App.scss';
+
+.menu-area {
+  width: 100%;
+  margin-bottom: px(40);
+
+  .menu {
+    .options-area {
+      margin: 0 auto;
+      max-width: px(464);
+      width: 100%;
+      height: px(60);
+      overflow: hidden;
+      margin-bottom: px(16);
+
+      .options {
+        display: flex;
+        height: 100%;
+
+        .option {
+          flex: 1;
+          height: 100%;
+          cursor: pointer;
+          background-color: #E9E5E2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: all ease .3s;
+
+          &.active {
+            background-color: #0eb84b;
+            
+            p {
+              color: $--color-white;
+            }
+          }
+
+          p {
+            margin: px(0);
+            @include font-size(16);
+            font-weight: 700;
+            padding: px(0) px(8);
+          }
+        }
+      }
+    }
+
+    .texts-area {  
+      margin: 0 auto;
+      max-width: px(496);
+      width: 100%;
+
+      .texts {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: px(0) px(16);
+
+        .title {
+          font-size: 28px;
+          @include font-size(24);
+          margin: 0;
+          cursor: default;
+          font-weight: 500;
+
+          .previous-step {
+            display: flex;
+            cursor: pointer;
+
+            svg {
+              margin-right: 5px;
+              @include font-size(20);
+            }
+          }
+        }
+
+        .next-step {
+          text-transform: uppercase;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          transition: all ease .3s;
+          cursor: pointer;
+          font-weight: 500;
+          @include font-size(12);
+
+          &:hover {
+            color: $__tertiary;
+          }
+
+          svg {
+            margin-left: px(5);
+          }
+        }
+      }
+    }
+  }
+}
+
+// DESKTOP 640
+@include respond-to($desktop__xs) {
+  .menu-area {
+    .menu {
+      .options-area {
+        border-radius: px(10);
+  
+        .options {
+          .option {
+            p.title {
+              font-size: px(16);
+            }
+          }
+        }
+      }
+  
+      .texts-area {
+        .texts {
+          h2.title {
+            font-size: px(24);
+          }
+
+          .next-step {
+            font-size: px(12);
+          }
+        }
+      }
+    }
+  }
+}

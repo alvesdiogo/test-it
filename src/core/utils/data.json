@@ -1,0 +1,219 @@
+{
+  "options": ["Recheios", "Massa", "Tamanho", "Ingredientes"],
+  "types": ["nova-iorquina", "siciliana", "napolitana"],
+  "sizes": ["P", "M", "G"],
+  "pizza": [
+    {
+      "name": "Calabresa",
+      "image": "p-01.png",
+      "avaliation": 4.8,
+      "promotion": true,
+      "ingredients": [
+        { "field": "Calabresa", "check": true },
+        { "field": "Queijo", "check": true },
+        { "field": "Cebola", "check": true },
+        { "field": "Oregano", "check": true },
+        { "field": "Shader", "check": true }
+      ],
+      "addIng": [
+        { "field": "azeitona", "check": false },
+        { "field": "catupiry", "check": false },
+        { "field": "cheddar", "check": false }
+      ],
+      "size": "P",
+      "type": "nova-iorquina",
+      "price": 20,
+      "qt": 1
+    },
+    {
+      "name": "Lombinho",
+      "image": "p-02.png",
+      "avaliation": 4.8,
+      "promotion": false,
+      "ingredients": [
+        { "field": "Lombinho", "check": true },
+        { "field": "Queijo", "check": true },
+        { "field": "Cebola", "check": true },
+        { "field": "Oregano", "check": true },
+        { "field": "Tomate", "check": true }
+      ],
+      "addIng": [
+        { "field": "azeitona", "check": false },
+        { "field": "catupiry", "check": false },
+        { "field": "cheddar", "check": false }
+      ],
+      "size": "P",
+      "type": "nova-iorquina",
+      "price": 20,
+      "qt": 1
+    },
+    {
+      "name": "Frango",
+      "image": "p-03.png",
+      "avaliation": 4.8,
+      "promotion": false,
+      "ingredients": [
+        { "field": "Frango", "check": true },
+        { "field": "Queijo", "check": true },
+        { "field": "Cebola", "check": true },
+        { "field": "Oregano", "check": true }
+      ],
+      "addIng": [
+        { "field": "azeitona", "check": false },
+        { "field": "catupiry", "check": false },
+        { "field": "cheddar", "check": false }
+      ],
+      "size": "P",
+      "type": "nova-iorquina",
+      "price": 20,
+      "qt": 1
+    },
+    {
+      "name": "Sushi",
+      "image": "p-04.png",
+      "avaliation": 4.8,
+      "promotion": false,
+      "ingredients": [
+        { "field": "Sushi", "check": true },
+        { "field": "Queijo", "check": true },
+        { "field": "Oregano", "check": true }
+      ],
+      "addIng": [
+        { "field": "azeitona", "check": false },
+        { "field": "catupiry", "check": false },
+        { "field": "cheddar", "check": false }
+      ],
+      "size": "P",
+      "type": "nova-iorquina",
+      "price": 20,
+      "qt": 1
+    },
+    {
+      "name": "Camarão",
+      "image": "p-05.png",
+      "avaliation": 4.8,
+      "promotion": false,
+      "ingredients": [
+        { "field": "Camarão", "check": true },
+        { "field": "Queijo", "check": true },
+        { "field": "Cebola", "check": true },
+        { "field": "Oregano", "check": true },
+        { "field": "Tomate", "check": true },
+        { "field": "Milho", "check": true }
+      ],
+      "addIng": [
+        { "field": "azeitona", "check": false },
+        { "field": "catupiry", "check": false },
+        { "field": "cheddar", "check": false }
+      ],
+      "size": "P",
+      "type": "nova-iorquina",
+      "price": 20,
+      "qt": 1
+    },
+    {
+      "name": "Carne",
+      "image": "p-06.png",
+      "avaliation": 4.8,
+      "promotion": false,
+      "ingredients": [
+        { "field": "Carne", "check": true },
+        { "field": "Queijo", "check": true },
+        { "field": "Cebola", "check": true },
+        { "field": "Oregano", "check": true },
+        { "field": "Tomate", "check": true }
+      ],
+      "addIng": [
+        { "field": "azeitona", "check": false },
+        { "field": "catupiry", "check": false },
+        { "field": "cheddar", "check": false }
+      ],
+      "size": "P",
+      "type": "nova-iorquina",
+      "price": 20,
+      "qt": 1
+    },
+    {
+      "name": "Musarela",
+      "image": "p-07.png",
+      "avaliation": 4.8,
+      "promotion": false,
+      "ingredients": [
+        { "field": "Calabresa", "check": true },
+        { "field": "Musarela", "check": true },
+        { "field": "Queijo", "check": true },
+        { "field": "Cebola", "check": true },
+        { "field": "Oregano", "check": true },
+        { "field": "Shader", "check": true },
+        { "field": "Milho", "check": true }
+      ],
+      "addIng": [
+        { "field": "azeitona", "check": false },
+        { "field": "catupiry", "check": false },
+        { "field": "cheddar", "check": false }
+      ],
+      "size": "P",
+      "type": "nova-iorquina",
+      "price": 20,
+      "qt": 1
+    }
+  ],
+  "drinks": [
+    {
+      "select": false,
+      "image": "b-01.png",
+      "name": "Cerveja",
+      "price": 5.5,
+      "qt": 1
+    },
+    {
+      "select": false,
+      "image": "b-02.png",
+      "name": "Whisky",
+      "price": 12.5,
+      "qt": 1
+    },
+    {
+      "select": false,
+      "image": "b-03.png",
+      "name": "Coca Cola",
+      "price": 6.5,
+      "qt": 1
+    },
+    {
+      "select": false,
+      "image": "b-04.png",
+      "name": "RedBull",
+      "price": 11,
+      "qt": 1
+    },
+    {
+      "select": false,
+      "image": "b-05.png",
+      "name": "Guaraná",
+      "price": 4.8,
+      "qt": 1
+    },
+    {
+      "select": false,
+      "image": "b-06.png",
+      "name": "Pepsi",
+      "price": 5,
+      "qt": 1
+    },
+    {
+      "select": false,
+      "image": "b-07.png",
+      "name": "Guaraton",
+      "price": 3,
+      "qt": 1
+    },
+    {
+      "select": false,
+      "image": "b-08.png",
+      "name": "Vinho",
+      "price": 18,
+      "qt": 1
+    }
+  ]
+}

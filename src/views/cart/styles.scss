@@ -1,0 +1,195 @@
+@import '../../core/StyleSheets/App.scss';
+
+.cart-view {
+  height: 100%;
+
+  .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #FAFAFA;
+  
+    .header-area {
+      width: 100%;
+      margin: px(16) px(0);
+  
+      .header {
+        max-width: px(768);
+        width: 100%;
+        margin: 0 auto;
+        padding: px(0) px(16);
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+  
+        .logo-area {
+          .logo {
+            img {
+              margin-left: px(-8);
+            }
+          }
+        }
+      }
+    }
+
+    >.cart {
+      width: 100%;
+      height: 100%;
+      margin-bottom: px(32);
+
+      .cart-summary {
+        max-width: 768px;
+        margin: 0 auto;
+        width: 100%;
+
+        .content-amount {
+          padding: 0 16px;
+          display: flex;
+          justify-content: flex-end;
+          background-color: #F3F3F3; 
+
+          .content {
+            display: flex;
+            flex-direction: column;
+            padding: px(16);
+            width: 100%;
+
+            table {
+              width: 100%;
+              margin-bottom: 16px;
+              
+              .text-h6 {
+                display: block;
+                text-align: left;
+              }
+          
+              .amount {
+                text-align: end;
+                font-size: 20px;
+                font-weight: 600;
+                color: green;
+                text-align: right;
+              }
+            }
+
+            .checkout-items {
+              .checkout-methods-items {
+                .item {
+                  display: flex;
+                  flex-direction: column;
+
+                  .add-checkout {
+                    margin-bottom: 8px;
+                    padding: 8px;
+                    background-color: $__tertiary;
+                    border: unset;
+                    color: #FFF;
+                    cursor: pointer;
+
+                    &:hover {
+                      opacity: .7;
+                    }
+                  }
+
+                  .buymore {
+                    cursor: pointer;
+                    padding: 7px;
+                    text-align: center;
+                    border: 1.5px solid #676767;
+                    text-decoration: none;
+
+                    &:hover {
+                      opacity: .7;
+                    }
+
+                    span {
+                      font-size: 12px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .points-area {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      .cart {
+        padding: 7px;
+        background: #0eb84b;
+        border-radius: 50%;
+        color: #FFF;
+        cursor: pointer;
+        position: relative;
+
+        .cartC {
+          position: absolute;
+          font-weight: 600;
+          top: -5px;
+          right: -3px;
+          background: #0eb84bcf;
+          padding: 5px;
+          font-size: 10px;
+          border-radius: 50%;
+        }
+      }
+
+      .points {
+        padding: 10px 20px;
+        border-radius: 30px;
+        background-color: #fedd06;
+        cursor: default;
+        display: flex;
+        align-items: center;
+        margin-right: px(16);
+
+        p {
+          margin: 0;
+          color: $--color-dark;
+          font-size: 14px;
+          font-weight: 800;
+        }
+      }
+    }
+  }
+}
+
+// DESKTOP 640
+@include respond-to($desktop) {
+  .cart-view {  
+    .container {
+      width: 100%;
+      display: flex;
+
+      >.cart {
+        display: flex;
+        max-width: 768px;
+        margin: 0 auto;
+
+        .cart-pizzas {
+          width: 66%;
+          grid-template-columns: 1fr;
+        }
+
+        .cart-summary {
+          width: 33%;
+
+          .content-amount {
+            width: 100%;
+            padding: 0;
+            justify-content: space-between;
+            border-radius: 8px;
+            min-height: 150px;
+          }
+        }
+      }
+    }
+  }
+}
